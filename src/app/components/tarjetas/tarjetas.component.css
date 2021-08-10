@@ -1,0 +1,11 @@
+
+.card-columns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 30rem;
+    margin: 1rem 3rem;
+}
+

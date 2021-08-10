@@ -1,0 +1,19 @@
+.titulo {
+    margin-top: 5rem;
+}
+
+.margen {
+    background-color: white;
+    margin: 5rem 10rem;
+    margin-bottom: 15rem;
+}
+
+.vacio {
+    text-align: center;
+    padding: 11rem;
+}
+
+.align-right {
+    display: flex;
+    align-items: flex-end;
+}

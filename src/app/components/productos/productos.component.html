@@ -1,0 +1,22 @@
+<app-navbar-aux></app-navbar-aux>
+
+<div class="container my-4">
+    <h1 class="f-w text-center titulo">
+        Productos y Servicios
+    </h1>
+    <div class="row justify-content-between">
+        <div class="col-3 my-4" *ngFor="let producto of productos">
+            <div class="card" style="width: 30rem;">
+                <img [src]="producto.imagen" class="card-img-top" alt="...">
+                <div class="card-body carta">
+                  <h5 class="card-title fs-2">{{ producto.nombre }}</h5>
+                  <p class="card-text fs-3"> $ {{ producto.precio }}.00</p>
+                  <button *ngIf="sesion" class="boton boton-azul" (click)="agregarCarrito( producto )">Agregar</button>
+                </div>
+              </div>
+        </div>
+    </div>
+    
+</div>
+ 
+ <app-footer></app-footer>

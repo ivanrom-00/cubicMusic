@@ -1,0 +1,12 @@
+<section class="seccion compañias">
+    <h3 class="centrar-texto fw-700 my-4">Nuestras Colaboraciones</h3>
+    <div class="imagen-compañias">
+        <div class="contenido-compañias">
+            <div *ngFor="let icono of iconos">
+                <a href="#">
+                    <img [src]="icono.url" class="imagen-compañia" alt="Imagen de compañia">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

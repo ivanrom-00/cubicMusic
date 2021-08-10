@@ -1,0 +1,129 @@
+<div class="container">
+    <div>
+        <h3 class="text-center my-4">
+            Productos
+        </h3>   
+    </div>
+    <div *ngIf="!ocultar">
+        <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Inv</th>
+                <th scope="col">Disp</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let producto of productos; let i = index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ producto.id }}</td>
+                <td>{{ producto.nombre }}</td>
+                <td>{{ producto.precio }}</td>
+                <td>{{ producto.inventario }}</td>
+                <td>{{ producto.disponible }}</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm fs-5" (click)="crearFormulario( producto )">Editar</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-sm fs-5" (click)="borrarProducto( producto, i )">Borrar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- <button type="button" class="btn btn-success btn-size" [routerLink]="['productoNuevo']"                 routerLinkActive="router-link-active" (click)="ocultar=!ocultar">Nuevo
+          </button> -->
+    </div>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+    <div *ngIf="ocultar">
+      <div class="container fondo">
+        <main class="contenedor seccion contenido-centrado">
+    
+            <h2 class="fw-500 f-white centrar-texto mb-4">Editar Producto</h2>
+    
+            <form class="contacto" action="" [formGroup]="forma" (ngSubmit)="actualizar()">
+    
+                <fieldset class="field">
+
+                  <fieldset disabled>
+                    <label for="nombre">Id:</label>
+                    <input
+                        class="disable"
+                        type="text" 
+                        name="id"
+                        formControlName="id"
+                        placeholder="Nombre del Producto">
+                  </fieldset>
+    
+                    
+    
+                    <label for="nombre">Nombre:</label>
+                    <input 
+                        type="text" 
+                        name="nombre"
+                        formControlName="nombre"
+                        placeholder="Nombre del Producto">
+    
+                    <label for="email">Precio:</label>
+                    <input 
+                        type="number" 
+                        name="precio" 
+                        formControlName="precio"
+                        placeholder="Precio del Producto" 
+                        >
+    
+                    <label for="telefono">Inventario:</label>
+                    <input 
+                        type="number" 
+                        name="inventario"
+                        formControlName="inventario"
+                        placeholder="Inventario del Producto" 
+                        >
+    
+                    <div class="contact100-form-checkbox margen-checkbox">
+                        <input
+                            class="input-checkbox100" 
+                            id="ckb1" type="checkbox" 
+                            name="remember-me"
+                            formControlName="disponible"
+                        >
+                        <label class="label-checkbox100 f-w" for="ckb1">
+                            Producto disponible:
+                        </label>
+                    </div>
+    
+                    <label for="telefono">Imagen:</label>
+                    <input 
+                        type="text" 
+                        name="imagen"
+                        formControlName="imagen"
+                        placeholder="Imagen del Producto" 
+                        >
+    
+                     <label for="telefono">Descripcion:</label>
+                    <input 
+                        type="text" 
+                        name="descripcion"
+                        formControlName="descripcion"
+                        placeholder="Descripcion del Producto" 
+                    >
+    
+                </fieldset>
+    
+                <div class="centrar-texto">
+                    <input type="submit" value="Actualizar" class="boton boton-azul mb-4">
+                </div>
+    
+            </form>
+    
+        </main>
+    </div>
+    </div>
+</div>
+

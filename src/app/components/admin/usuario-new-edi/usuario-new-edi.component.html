@@ -1,0 +1,44 @@
+<div class="container fondo">
+    <main class="contenedor seccion contenido-centrado">
+
+        <h2 class="fw-500 f-white centrar-texto mb-4">Crear Usuario</h2>
+
+        <form class="contacto" action="" [formGroup]="forma" (ngSubmit)="guardar()">
+
+            <fieldset class="field">
+                
+
+                <label for="nombre">Nombre:</label>
+                <input 
+                    type="text" 
+                    name="nombre" 
+                    formControlName="nombre"
+                    placeholder="Nombre del usuario" 
+                    >
+
+                <label for="email">Email:</label>
+                <input 
+                    type="email" 
+                    name="email"
+                    formControlName="email"
+                    placeholder="Email del usuario" 
+                    >
+
+                <label for="password">Password:</label>
+                <input 
+                    type="password" 
+                    name="password"
+                    formControlName="password"
+                    placeholder="contraseña del usuario" 
+                    >
+
+            </fieldset>
+
+            <div class="centrar-texto">
+                <input type="submit" value="Crear" class="boton boton-azul mb-4">
+            </div>
+
+        </form>
+
+    </main>
+</div>

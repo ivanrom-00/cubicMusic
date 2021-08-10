@@ -1,0 +1,18 @@
+<app-navbar-aux></app-navbar-aux>
+
+<div class="container contenedor">
+    <div class="row">
+        <div class="col">
+            <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control fs-2 my-4" placeholder="Buscar artista...">
+        </div>
+    </div>
+    <app-loading class="m-5" *ngIf="loading"></app-loading>
+
+    <app-tarjetas *ngIf="!loading" [items]="artistas"></app-tarjetas>
+</div>
+
+
+
+
+
+<app-footer></app-footer>

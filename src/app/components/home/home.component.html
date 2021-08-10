@@ -1,0 +1,91 @@
+
+<app-navbar></app-navbar>
+
+<section class="seccion bienvenida">
+    <div class="contenedor contenido-bienvenida">
+        <h2 class="centrar-texto my-5">Esto es Cubic Music</h2>
+        <p class="f-w my-5">
+            La disquera de la música independiente más grande en México. Llevamos 15 años produciendo artistas y conceptos, tenemos la experiencia que necesitas para llevar tu proyecto a un siguiente nivel.
+        </p>
+        <p class="f-w my-5">Llena tu espíritu, sé libre y contagia a los demás.</p>
+        <div class="frase">
+            <blockquote>
+                La música es sinónimo de libertad porque el ritmo y la armonía encuentran su camino en lo más profundo del alma.
+            </blockquote>
+            <p class="f-w my-5">
+                - Kurt Cobain
+            </p>
+        </div>
+    </div>
+</section>
+
+<div class="row text-center margen" *ngIf="artistas.length > 0">
+    <h2 class="f-w my-4">
+        Nuestras Producciones
+    </h2>
+    <div class="col">
+        <app-slider [artistas]="artistas"></app-slider>
+    </div>
+</div>
+
+<!-- <app-main></app-main> -->
+
+<app-companies></app-companies>
+
+<section class="seccion">
+    <div class="contenedor destacado">
+        <h3 class="fw-300 centrar-texto my-5">Lo más nuevo</h3>
+        <div class="contenido-destacado">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-4">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/BRPz4usCcwI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="destacado-info">
+                        <h4>New Light - Luisa Fernanda</h4>
+                        <h4 class="f-w fs-2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptatum eligendi ut fugiat atque at suscipit, cumque architecto itaque quos officia vel similique tempore reprehenderit, praesentium nemo magnam! Quisquam, quis!
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="seccion-inferior seccion contenedor">
+
+    <div class="estadisticas">
+
+        <img src="../../../assets/images/grafico-exponencial.png" alt="Estadisticas">
+        <h4>Crecimiento Exponencial</h4>
+        <h4 class="fs-3">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci quisquam nemo fugiat hic sit id aliquam non laboriosam, placeat impedit nam, asperiores possimus labore qui aspernatur illo, itaque architecto saepe?
+        </h4>
+
+        <div class="comentario">
+            <blockquote>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat maiores blanditiis, alias voluptatibus fuga eaque.
+            </blockquote>
+            <p>-Empresa Chida</p>
+        </div>
+
+    </div>
+
+    <div class="inferior-contacto">
+
+        <h4>No te quedes atrás, lanza tu música</h4>
+
+        <h4 class="f-w fs-3">
+            Conoce nuestros planes de producción. Llena nuestro formulario y nos pondremos en contacto contigo.
+        </h4>
+
+        <a routerLink="/contacto" class="boton boton-azul">Contacto</a>
+
+    </div>
+
+</div>
+
+<app-footer></app-footer>

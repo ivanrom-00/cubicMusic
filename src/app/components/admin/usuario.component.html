@@ -1,0 +1,96 @@
+<div class="container">
+    <div>
+        <h3 class="text-center my-4">
+            Usuarios
+        </h3>   
+    </div>
+    <div>
+        <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Email</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let admin of admins; let i = index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ admin.id }}</td>
+                <td>{{ admin.nombre }}</td>
+                <td>{{ admin.email }}</td>
+                <td>
+                    <button type="button" class="btn btn-primary btn-sm fs-5" (click)="crearFormulario( admin )">Editar</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-sm fs-5" (click)="borrarUsuario( admin, i  )">Borrar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" class="btn btn-success btn-size" [routerLink]="['usuarioAccion']" routerLinkActive="router-link-active">Nuevo
+          </button>
+    </div>
+
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+
+    <div *ngIf="editar">
+      <div class="container fondo">
+        <main class="contenedor seccion contenido-centrado">
+    
+            <h2 class="fw-500 f-white centrar-texto mb-4">Editar Usuario</h2>
+    
+            <form class="contacto" action="" [formGroup]="forma" (ngSubmit)="actualizar()">
+    
+                <fieldset class="field">
+    
+                  <fieldset disabled>
+                    <label for="id">Id:</label>
+                      <input 
+                        type="text" 
+                        name="id"
+                        formControlName="id"
+                        placeholder="Nombre del usuario">
+                  </fieldset>
+
+                    <label for="nombre">Nombre:</label>
+                    <input 
+                        type="text" 
+                        name="nombre" 
+                        formControlName="nombre"
+                        placeholder="Nombre del usuario" 
+                        >
+    
+                    <label for="email">Email:</label>
+                    <input 
+                        type="email" 
+                        name="email"
+                        formControlName="email"
+                        placeholder="Email del usuario" 
+                        >
+    
+                    <label for="password">Password:</label>
+                    <input 
+                        type="password" 
+                        name="password"
+                        formControlName="password"
+                        placeholder="contraseña del usuario" 
+                        >
+    
+                </fieldset>
+    
+                <div class="centrar-texto">
+                    <input type="submit" value="Actualizar" class="boton boton-azul mb-4">
+                </div>
+    
+            </form>
+    
+        </main>
+    </div>
+    </div>
+
+</div>

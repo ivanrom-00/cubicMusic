@@ -1,0 +1,50 @@
+
+<app-navbar-aux></app-navbar-aux>
+
+<div class="container">
+    <h1 class="f-w text-center titulo">
+        Carrito
+    </h1>
+    <div class="margen vacio" *ngIf="!hayProd">
+      <h2>
+        Carrito Vacio
+      </h2>
+    </div>
+    <div class="margen" *ngIf="hayProd">
+        <table class="table text-center">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="fs-2" *ngFor="let item of car.prods; let i = index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ item.nombre }}</td>
+                <td>{{ item.precio }}</td>
+                <td>{{ item.cant }}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+    <div class="container my-4 fondo" *ngIf="hayProd">
+      <div class="row justify-content-end">
+        <div class="col-4">
+          <h2>Total:<span class="badge bg-secondary mx-4">${{ total }}.00</span></h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-2">
+          <button type="button" class="boton boton-azul" (click)="comprar()">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    
+</div>
+
+<app-footer></app-footer>

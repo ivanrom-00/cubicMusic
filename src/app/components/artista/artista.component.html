@@ -1,0 +1,27 @@
+
+
+<app-navbar-aux></app-navbar-aux>
+
+<section class="seccion">
+    <div class="contenedor destacado">
+        <h3 class="fw-300 centrar-texto my-5">{{ artist.name }}</h3>
+        <div class="contenido-destacado">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-4">
+                    <div class="video">
+                        <img [src]="artist.img" class="imagen" allowfullscreen>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="destacado-info">
+                        <h4 class="f-w fs-2">
+                            {{ artist.desc }}
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

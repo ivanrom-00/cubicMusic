@@ -1,0 +1,19 @@
+<app-navbar-aux></app-navbar-aux>
+
+<app-loading *ngIf="loading"></app-loading>
+
+<div *ngIf="error" style="height: 100%;">
+    <div  class="alert alert-danger animated fadeIn">
+        <h3>Error</h3>
+        <p class="fs-2">
+            {{ mensajeError }}
+        </p>
+    </div>
+</div>
+
+
+
+
+<app-tarjetas [items]="nuevasCanciones"></app-tarjetas>
+
+<app-footer></app-footer>

@@ -1,0 +1,37 @@
+<header class="site-header inicio-internas">
+    <div class="contenedor contenido-header">
+        <div class="barra">  
+            <a href="/home">
+                <img src="../../../../assets/images/logo.png" alt="Logotipo de Cubic Music">
+            </a>
+            <nav class="navegacion">
+                <a class="dropdown-toggle ancho" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Nosotros
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item f-b" routerLink="/conocenos">Conócenos</a></li>
+                    <li><a class="dropdown-item f-b" routerLink="/producciones">Producciones</a></li>
+                    <li><a class="dropdown-item f-b" routerLink="/contacto">Contacto</a></li>
+                  </ul>
+                  <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Descubrir
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item f-b" routerLink="/homeSpotify">Lo mas nuevo</a></li>
+                    <li><a class="dropdown-item f-b" routerLink="/search">Buscar</a></li>
+                  </ul>
+                    <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Comprar
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item f-b" routerLink="/productos">Productos</a></li>
+                      <li><a class="dropdown-item f-b" routerLink="/servicios">Servicios</a></li>
+                    </ul>
+                    <a *ngIf="sesion" routerLink="/carrito">Carrito</a>
+                    <a *ngIf="!sesion" routerLink="/login">Ingresar</a>
+                    <a *ngIf="sesion" class="f-w" >{{ userId }}</a>
+                    <button *ngIf="sesion" type="button" class="btn btn-outline-danger btn-salir" (click)="salir()">Salir</button>
+            </nav>
+        </div>
+    </div>    
+</header>

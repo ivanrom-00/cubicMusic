@@ -1,0 +1,46 @@
+
+
+
+<app-navbar-admin></app-navbar-admin>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav class="sidenav" mode="push"  [(opened)]="opened">
+
+        <div class="text-center">
+            <h2>
+                Opciones
+            </h2>
+
+            <button type="button" class="btn btn-secondary btn-size"[routerLink]="['ventas']">Ventas</button>
+            <div class="dropdown">
+                <button class="btn btn-secondary btn-size dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  Productos
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item"  [routerLink]="['producto']">Inventario</a></li>
+                  <li><a class="dropdown-item" [routerLink]="['productoNuevo']">Crear Producto</a></li>
+                </ul>
+             </div>
+            <button type="button" class="btn btn-secondary btn-size" [routerLink]="['usuario']">Usuarios</button> 
+        </div>
+        
+    </mat-sidenav>
+    <mat-sidenav-content>
+
+        <div>
+            <button (click)="opened = !opened" class="boton boton-azul mx-4">
+                {{ textoBoton }}
+            </button>
+            <div class="container text-center titulo">
+                <h1 class="f-w">
+                    Admin
+                </h1>
+            </div>
+
+            <router-outlet></router-outlet>
+            
+        </div>
+
+        
+    </mat-sidenav-content>
+</mat-sidenav-container>
+

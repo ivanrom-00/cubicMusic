@@ -1,0 +1,70 @@
+<div class="container fondo">
+    <main class="contenedor seccion contenido-centrado">
+
+        <h2 class="fw-500 f-white centrar-texto mb-4">Crear Producto</h2>
+
+        <form class="contacto" action="" [formGroup]="forma" (ngSubmit)="guardar()">
+
+            <fieldset class="field">
+
+                <label for="nombre">Nombre:</label>
+                <input 
+                    type="text" 
+                    name="nombre"
+                    formControlName="nombre"
+                    placeholder="Nombre del Producto">
+
+                <label for="email">Precio:</label>
+                <input 
+                    type="number" 
+                    name="precio" 
+                    formControlName="precio"
+                    placeholder="Precio del Producto" 
+                    >
+
+                <label for="telefono">Inventario:</label>
+                <input 
+                    type="number" 
+                    name="inventario"
+                    formControlName="inventario"
+                    placeholder="Inventario del Producto" 
+                    >
+
+                <div class="contact100-form-checkbox margen-checkbox">
+                    <input
+                        class="input-checkbox100" 
+                        id="ckb1" type="checkbox" 
+                        name="remember-me"
+                        formControlName="disponible"
+                    >
+                    <label class="label-checkbox100 f-w" for="ckb1">
+                        Producto disponible:
+                    </label>
+                </div>
+
+                <label for="telefono">Imagen:</label>
+                <input 
+                    type="text" 
+                    name="imagen"
+                    formControlName="imagen"
+                    placeholder="Imagen del Producto" 
+                    >
+
+                 <label for="telefono">Descripcion:</label>
+                <input 
+                    type="text" 
+                    name="descripcion"
+                    formControlName="descripcion"
+                    placeholder="Descripcion del Producto" 
+                >
+
+            </fieldset>
+
+            <div class="centrar-texto">
+                <input type="submit" value="Crear" class="boton boton-azul mb-4">
+            </div>
+
+        </form>
+
+    </main>
+</div>

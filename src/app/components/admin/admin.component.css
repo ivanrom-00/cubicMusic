@@ -1,0 +1,33 @@
+
+.margen {
+    margin: 5rem;
+}
+
+.btn-size {
+    width: 90%;
+    height: 4rem;
+    font-size: x-large;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.titulo {
+    margin-bottom: 4rem;
+}
+
+.example-container {
+    width: 100%;
+    height: 90%;
+    background-color: #753183;
+    /* border: 1px solid rgba(0, 0, 0, 0.5); */
+  }
+  
+  .sidenav {
+    padding: 20px;
+    width: 20%;
+    background-color: white;
+  }
+  
+
+  
+  

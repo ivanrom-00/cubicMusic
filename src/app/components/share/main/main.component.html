@@ -1,0 +1,27 @@
+<div class="seccion producciones container">
+    <div class="contenedor contenido-producciones">
+        <h2 class="centrar-texto">Nuestras producciones</h2>
+
+        <div class="contenedor-producciones">
+
+            <div class="card text-center my-4" style="width: 30rem;" *ngFor="let artista of artistas; let i = index">
+                <img  [src]='artista.img' alt="">
+                <div class="card-body">
+                  <h3 class="card-title">{{ artista.name }}</h3>
+                  <ul class="iconos-artista">
+                    <li>
+                        <img src="../../../../assets/images/icono-album.png" alt="Icono Album">
+                        <p>{{ artista.album }}</p>
+                    </li>
+                    <li>
+                        <img src="../../../../assets/images/icono-cancion.png" alt="Icono Cancion">
+                        <p>{{ artista.songs }}</p>
+                    </li>
+                  </ul>
+                  <a [routerLink]="['/artista', i]" routerLinkActive="router-link-active"  class="boton boton-azul mb-4">Descubrir</a>
+                </div>
+              </div>
+        </div>
+    </div>
+
+</div>
